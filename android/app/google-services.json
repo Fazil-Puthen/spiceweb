@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "301016432960",
+    "project_id": "spiceweb-2f7ef",
+    "storage_bucket": "spiceweb-2f7ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301016432960:android:fed131d0c84fd6b418faa5",
+        "android_client_info": {
+          "package_name": "com.example.spiceweb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5L_1kJw_hXawx5jlz73lSYLSMV-cs59Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
