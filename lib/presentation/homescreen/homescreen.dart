@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:spiceweb/constants/constants.dart';
 import 'package:spiceweb/presentation/homescreen/platform%20widgets/mobileview.dart';
+import 'package:spiceweb/presentation/homescreen/platform%20widgets/mobileview2.dart';
 import 'package:spiceweb/presentation/homescreen/platform%20widgets/tabview.dart';
 import 'package:spiceweb/presentation/homescreen/platform%20widgets/webview.dart';
 
@@ -23,6 +25,21 @@ class HomePage extends StatelessWidget {
    'assets/corrainder.jpg',
    'assets/cumin.jpg'];
 
+   List<String> names=['pepper',
+   'black cardamom',
+    'cardamom',
+   'corrainder',
+   'cumin','pepper',
+   'black cardamom',
+    'cardamom',
+   'corrainder',
+   'cumin',
+   'pepper',
+   'black cardamom',
+    'cardamom',
+   'corrainder',
+   'cumin'];
+
   @override
   Widget build(BuildContext context) {
     final screenheight=MediaQuery.of(context).size.height;
@@ -41,13 +58,13 @@ class HomePage extends StatelessWidget {
         ),
         child:
         //appbar child
-       const  Padding(
+        Padding(
           padding: EdgeInsets.symmetric(horizontal:20),
-          child: const Row(
+          child:  Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Homemade',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w700),),
-              Row(
+              Text('Homemade',style:headingfont),
+              const Row(
                 children: [
                 Icon(Icons.heart_broken_outlined),
                 SizedBox(width: 25,),
@@ -60,19 +77,17 @@ class HomePage extends StatelessWidget {
        body:
        
        //Body
-        SingleChildScrollView(
-          child:screenwidth<1000 && screenwidth>500?
-    
-          //tab view child
-         TabView(screenheight: screenheight, screenwidth: screenwidth, images: images)
-          :screenwidth<=500?
-
-          //mobile view child
-          MobileView(screenheight: screenheight, screenwidth: screenwidth, images: images):
-
-            //web view child
-          WebView(screenheight: screenheight, screenwidth: screenwidth, images: images),
-        )
+        screenwidth<1000 && screenwidth>500?
+         //tab view child
+        TabView(screenheight: screenheight, screenwidth: screenwidth, images: images)
+        
+        :screenwidth<=500?
+        
+        //mobile view child
+        MobileViewtwo(screenheight: screenheight, screenwidth: screenwidth, images: images,names: names,):
+        
+          //web view child
+        WebView(screenheight: screenheight, screenwidth: screenwidth, images: images)
     );
   }
 }
